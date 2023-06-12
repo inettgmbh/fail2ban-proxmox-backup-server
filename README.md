@@ -4,12 +4,17 @@ Fail2Ban for Proxmox Backup Server (PBS)
 
 filter and jail for fail2ban protecting a Proxmox Backup Server (PBS) from brute force attacks to the API/WebGUI
 
+# Requirements
+
+- [fail2ban](https://www.fail2ban.org/wiki/index.php/Main_Page) - see [fail2ban requirements](https://www.fail2ban.org/wiki/index.php/Requirements)
+- fail2ban needs [iptables](https://www.netfilter.org/projects/iptables/index.html).
+
 # Installation
 
 ## Install fail2ban on a Proxmox Backup Server
 
 ```
-apt -y update; apt -y install fail2ban
+apt -y update; apt -y install fail2ban iptables
 ```
 
 ## Add the configs from this repository
